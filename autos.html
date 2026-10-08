@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="limpieza.html">LIMPIEZA</a></li>
+                <li><a href="autos.html">AUTOS</a></li>
+                <li><a href="jarceria.html">JARCERÍA</a></li>
+                <li><a href="belleza.html">BELLEZA</a></li>
+                <li><a href="clientes.html">CLIENTES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+
+    <main>
+        <center>
+            
+            <div class="neon">
+                CATALÓGO DEL ÁREA DE AUTOS
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Sh_carro.png" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">SHAMPOO PARA CARRO</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$50.00</strong></center>
+                <br>
+                Jabón con pH neutro especial para carrocerías de autos
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Shampoo para carro')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Almorol.png" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">ALMOROL</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$110.00</strong></center>
+                <br>
+                Producto químico líquido o en crema diseñado para limpiar, abrillantar y proteger las superficies de vinilo, plástico y caucho en el interior de los automóviles.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Almorol')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Alto_brillo.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">ALTO BRILLO</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$160.00</strong></center>
+                <br>
+                Producto base solvente diseñado para abrillantar tanto plásticos como llantas dejando efecto mojado.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Alto brillo')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Aroma_carro.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">AROMA PARA INTERIOR DEL CARRO</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$45.00</strong></center>
+                <br>
+                Producto diseñado para refrescar, perfumar y neutralizar los malos olores en el interior de un vehículo
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Aroma para interior')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Toallas.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">TOALLAS DE MICROFIBRA</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$26.00</strong></center>
+                <br>
+                Toallas para secado rápido y eficaz sin rastro de pelusas.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Toallas de microfibra')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Cepillo.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">CEPILLO CASTOR</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$120.00</strong></center>
+                <br>
+                Utensilio formado por un mango y una base con filamentos flexibles o cerdas, diseñado para lavar carrocerías.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Cepillo Castor')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="carrito">
+                <h2>CARRITO DE COMPRAS</h2>
+            <div class="contador"><strong>Productos en el carrito:</strong> <span id="cantidad">0</span></div>
+            <ul id="listaCarrito"></ul>
+            </div>
+
+            <script>
+                let cantidad = 0;
+                const listaCarrito = document.getElementById("listaCarrito");
+                const cantidadSpan = document.getElementById("cantidad");
+
+                function agregarAlCarrito(producto) {
+                                                        cantidad++;
+                                                        cantidadSpan.textContent = cantidad;
+
+                                                        const li = document.createElement("li");
+                                                        li.textContent = producto;
+                                                        listaCarrito.appendChild(li);
+                                                    }
+            </script>
+
+        </center>
+    </main>
+
+</body>
+</html>

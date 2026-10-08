@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarceria</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="limpieza.html">LIMPIEZA</a></li>
+                <li><a href="autos.html">AUTOS</a></li>
+                <li><a href="jarceria.html">JARCERÍA</a></li>
+                <li><a href="belleza.html">BELLEZA</a></li>
+                <li><a href="clientes.html">CLIENTES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+
+    <main>
+        <center>
+            
+            <div class="neon">
+                CATALÓGO DEL ÁREA DE JARCERÍA
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Escoba.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">ESCOBA DE PLÁSTICO</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$85.00</strong></center>
+                <br>
+                Herramienta de limpieza con serdas especiales para barrer cómodamente.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Escoba de plástico')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Trapeador.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">TRAPEADOR DE MICROFIBRA</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$180.00</strong></center>
+                <br>
+                Herramientas de limpieza esenciales formadas por un bastón y un cabezal de tiras de microfibra, diseñados para absorber líquidos y limpiar pisos.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Trapeador de Microfibra')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Recogedor.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">RECOGEDOR DE PLÁSTICO</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$55.00</strong></center>
+                <br>
+                Utensilio de limpieza con forma de bandeja abierta por delante y un mango, diseñado para acumular y retirar el polvo o los residuos barridos con una escoba.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Recogedor de plástico')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Cubeta.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">CUBETA DE AGUA</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$40.00</strong></center>
+                <br>
+                Recipiente cilíndrico o troncocónico con un asa abatible en la parte superior que sirve para recolectar, almacenar y transportar líquidos.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Cubeta')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Toallas.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">TOALLAS DE MICROFIBRA</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$26.00</strong></center>
+                <br>
+                Toallas para secado rápido y eficaz sin rastro de pelusas.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Toallas de microfibra')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Pericos.jpeg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">PINZAS PARA ROPA</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$40.00</strong></center>
+                <br>
+                Ideales para colgar prendas ligeras e interiores.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Pinzas para ropa')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="carrito">
+                <h2>CARRITO DE COMPRAS</h2>
+            <div class="contador"><strong>Productos en el carrito:</strong> <span id="cantidad">0</span></div>
+            <ul id="listaCarrito"></ul>
+            </div>
+
+            <script>
+                let cantidad = 0;
+                const listaCarrito = document.getElementById("listaCarrito");
+                const cantidadSpan = document.getElementById("cantidad");
+
+                function agregarAlCarrito(producto) {
+                                                        cantidad++;
+                                                        cantidadSpan.textContent = cantidad;
+
+                                                        const li = document.createElement("li");
+                                                        li.textContent = producto;
+                                                        listaCarrito.appendChild(li);
+                                                    }
+            </script>
+
+        </center>
+    </main>
+
+</body>
+</html>

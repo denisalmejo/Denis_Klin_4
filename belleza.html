@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleza</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="limpieza.html">LIMPIEZA</a></li>
+                <li><a href="autos.html">AUTOS</a></li>
+                <li><a href="jarceria.html">JARCERÍA</a></li>
+                <li><a href="belleza.html">BELLEZA</a></li>
+                <li><a href="clientes.html">CLIENTES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+
+    <main>
+        <center>
+            
+            <div class="neon">
+                CATALÓGO DEL ÁREA DE BELLEZA
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Crema1.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">CREMA CORPORAL</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$90.00</strong></center>
+                <br>
+                Mezcla en forma de emulsión (agua y aceites) diseñada para aplicarse en la piel de todo el cuerpo con el fin de nutrirla y protegerla. 
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Crema Corporal')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Jabones.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">JABONES ARTESANALES</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$35.00</strong></center>
+                <br>
+                Productos de limpieza suave elaborados a partir de una base de glicerina vegetal, ideales para hidratar y cuidar todo tipo de pieles, especialmente las sensibles o secas.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Jabones Artesanales')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Mascarillas.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">MASCARILLAS PARA LA CARA</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$85.00</strong></center>
+                <br>
+                Ayudan a hidratar, limpiar o calmar la piel según los ingredientes que utilices.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Mascarillas para la cara')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Dama.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">PERFUME DE DAMA</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$150.00</strong></center>
+                <br>
+                Composición aromática diseñada para mujeres que combina diferentes notas olfativas para reflejar elegancia, personalidad y estilo.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Perfume de Dama')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="card">
+                <img src="img/Caballero.jpg" width="100px" height="100px">
+            <div class="card-content">
+            <div class="card-title">PERFUME DE CABALLERO</div>
+            <br>
+            <div class="card-description">
+                <center><strong>$150.00</strong></center>
+                <br>
+                Composición aromática diseñada para hombres que combina diferentes notas olfativas para reflejar elegancia, personalidad y estilo.
+                <br>
+            </div>
+            </div>
+            <center><button class="boton" onclick="agregarAlCarrito('Perfume de Caballero')">Agregar al carrito</button></center>
+            <br>
+            </div>
+            <br><br>
+
+            <div class="carrito">
+                <h2>CARRITO DE COMPRAS</h2>
+            <div class="contador"><strong>Productos en el carrito:</strong> <span id="cantidad">0</span></div>
+            <ul id="listaCarrito"></ul>
+            </div>
+
+            <script>
+                let cantidad = 0;
+                const listaCarrito = document.getElementById("listaCarrito");
+                const cantidadSpan = document.getElementById("cantidad");
+
+                function agregarAlCarrito(producto) {
+                                                        cantidad++;
+                                                        cantidadSpan.textContent = cantidad;
+
+                                                        const li = document.createElement("li");
+                                                        li.textContent = producto;
+                                                        listaCarrito.appendChild(li);
+                                                    }
+            </script>
+
+        </center>
+    </main>
+
+</body>
+</html>
